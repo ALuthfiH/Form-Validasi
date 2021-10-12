@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Validasi</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            body {
+                background-color: #013880;
+            }
+    
+            footer {
+                background-color: #fff;
+                height: 80px;
+                width: 100%;
+                margin-top: 40px;
+            }
+
+            .card {
+                border-radius: 1rem;
+            }
+    
+            .card-body {
+                background-color: #a5c3e7;
+                border-radius: 1rem;
+            }
+
+            .center {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+            }
+
+            .btn {
+                background-color: #ffc710;
+                border-color: #ffc710;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container my-5">
+            <div class="card shadow">
+                <div class="card-body">
+                    <div class="text-center">
+                        <h2 style="color:white">Form Validasi Vaksinasi Mahasiswa FTEIC</h2>
+                    </div>
+                    <form name="formPendaftaran" action="" method="post" onsubmit="return validateForm()">
+                        <div class="form-group">
+                            <label style="color:white">Nama</label>
+                            <input type="text" name="nama" placeholder="Nama lengkap" class="form-control" required maxlength="40" minlength="3">
+                        </div>
+                        <div class="form-group">
+                            <label style="color:white">NRP</label>
+                            <input type="number" name="nrp" placeholder="NRP" class="form-control" required maxlength="20" minlength="3">
+                        </div>
+                        <div class="form-group">
+                            <label style="color:white">Email</label>
+                            <input type="email" name="email" placeholder="Email Aktif" class="form-control">
+                            <small id="emailHelp" class="form-text text-muted">Email Akan Digunakan Untuk Mengirimkan Notifikasi.</small>
+                        </div>
+                        <div class="form-group">
+                            <label style="color:white">Domisili</label>
+                            <input type="text" name="domisili" placeholder="Surabaya, Jawa Timur" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label style="color:white">Jurusan</label>
+                            <select name="jurusan" class="form-control">
+                                <option value="" selected disabled hidden>- Pilih Jurusan</option>
+                                <option value="1">Teknik Informatika</option>
+                                <option value="2">Sistem Informasi</option>
+                                <option value="3">Teknologi Informasi</option>
+                                <option value="4">Teknik Elektro</option>
+                                <option value="5">Teknik Komputer</option>
+                                <option value="6">Teknik Biomedik</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label style="color:white">Status Vaksin</label>
+                            <select name="status" class="form-control">
+                                <option value="" selected disabled hidden>- Pilih Status Vaksin</option>
+                                <option value="1">Belum</option>
+                                <option value="2">Dosis 1</option>
+                                <option value="3">Dosis 2</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button style="color: black" type="submit" class="btn btn-primary mt-3">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+    <footer>
+        <div class="text-center p-4">
+            &copy 2021 Institut Teknologi Sepuluh Nopember
+        </div>
+    </footer>
+</html>
